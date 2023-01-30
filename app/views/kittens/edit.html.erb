@@ -1,0 +1,6 @@
+<%= form_with model: @kitten do |form| %>
+  <%= render partial: 'kitten_form', locals: { form: form } %>
+  <%= form.submit 'Update Kitten' %>
+<% end %>
+<%= link_to 'Delete', kitten_path(@kitten), data: { turbo_method: :delete, turbo_confrirm: 'Are you sure?' } %>
+
